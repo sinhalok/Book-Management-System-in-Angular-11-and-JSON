@@ -1,0 +1,134 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstName": "Chotu",
+      "lastName": "Sinha",
+      "email": "chotu@gmail.com",
+      "mobile": 1234566766,
+      "salary": 53634563546,
+      "password": "12345"
+    },
+    {
+      "id": 4,
+      "firstName": "Ram",
+      "lastName": "shri",
+      "email": "cho@gmail.com",
+      "mobile": 2533453,
+      "salary": 122222223
+    },
+    {
+      "id": 5,
+      "firstName": "Ravi",
+      "lastName": "Mittal",
+      "email": "r@gmail.com",
+      "mobile": 4524543,
+      "salary": 52352345,
+      "password": "123"
+    },
+    {
+      "id": 6,
+      "firstName": "Mamta",
+      "lastName": "Sinha",
+      "email": "mamta@gmail.com",
+      "mobile": 23453254,
+      "salary": 523542354,
+      "password": "12345"
+    },
+    {
+      "firstName": "Rajiv",
+      "lastName": "Sinha",
+      "email": "rajiv@gmail.com",
+      "mobile": 452345,
+      "salary": 3452542345,
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "firstName": "Neeraj",
+      "lastName": "R",
+      "email": "asdf",
+      "mobile": 2352,
+      "salary": 2354
+    },
+    {
+      "firstName": "devendra",
+      "lastName": "mishra",
+      "email": "d@gmail.com",
+      "mobile": 543254,
+      "salary": 32452345,
+      "password": "1234",
+      "id": 9
+    }
+  ],
+  "profile": [
+    {
+      "id": 2,
+      "bookName": "Avenger",
+      "author": "Julie",
+      "genre": "Action",
+      "year": 2009
+    },
+    {
+      "id": 3,
+      "bookName": "Harry Potter",
+      "author": "Rowling",
+      "genre": "fiction",
+      "year": 2000
+    },
+    {
+      "id": 4,
+      "bookName": "Time To Change",
+      "author": "Ravi Shastri",
+      "genre": "Life",
+      "year": 2020
+    },
+    {
+      "id": 5,
+      "bookName": "Thor",
+      "author": "Neeraj bhai",
+      "genre": "Fiction",
+      "year": 2021
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullName": "Alok",
+      "email": "a@gmail.com",
+      "password": "12345",
+      "mobile": 2323,
+      "id": 1
+    },
+    {
+      "fullName": "Amit Sinha",
+      "email": "amit@gmail.com",
+      "password": "12345",
+      "mobile": 2342,
+      "id": 2
+    },
+    {
+      "fullName": "Ravi Sinha",
+      "email": "ravi@gmail.com",
+      "password": "1234",
+      "mobile": 235423452,
+      "id": 3
+    },
+    {
+      "fullName": "ratnapriya sinha",
+      "email": "ratnapriya@gmail.com",
+      "password": "12345",
+      "mobile": 234232252,
+      "id": 4
+    },
+    {
+      "fullName": "Neeraj",
+      "email": "n@gmail.com",
+      "password": "123",
+      "mobile": 325234,
+      "id": 5
+    }
+  ],
+  "readlater": [],
+  "favorite": []
+}

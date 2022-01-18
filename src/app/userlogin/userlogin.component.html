@@ -1,0 +1,64 @@
+<marquee width="100%" direction="right" height="50  px">
+    <h1><strong>Book  Project</strong>  </h1>  
+       </marquee>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Book Management System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+          
+           
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+  
+  
+  
+  
+  
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <div class="card">
+                  <div class="text-center">
+                      <h1>User Login</h1>
+                      <h6>Please Enter Email & Password!!</h6>
+                  </div>
+                 
+                      <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  
+                            <span class="text-light"
+                            *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+                            Email is required
+                        </span>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                            <span class="text-light"
+                            *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                            Password is required
+                        </span>
+                         
+                          </div>
+    
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </form><br/>
+                        <a routerLink="/usersignup">For New User--->Click here to Register</a>
+                      
+                  
+              </div>
+          </div>
+      </div>
+  </div>

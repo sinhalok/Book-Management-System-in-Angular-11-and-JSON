@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1>User ReadLater Dashboard</h1>
+      <div class="d-flex">
+        <button  class="btn btn-warning mx-2" routerLink="/userdashboard">Dashboard</button>
+        <button  class="btn btn-warning mx-2" routerLink="/favorite">Favorite</button>
+        <button type="button" routerLink="/readlater" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Read Later</button>
+        <button routerLink="/" class="btn btn-danger mx-2">LogOut</button>
+  
+      </div>
+    </div>
+  
+  
+  </nav>
+
+  <table class="table mt-3">
+      <thead>
+          <tr>
+              <th scope="col">Book ID</th>
+              <th scope="col">Book Name</th>
+              <th scope="col">Author Name</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Year</th>
+              <th scope="col">Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let row of bookData">
+            
+              <td>{{row.id}}</td>
+              <td>{{row.bookName}}</td>
+              <td>{{row.author}}</td>
+              <td>{{row.genre}}</td>
+              <td>{{row.year}}</td>
+              <td>
+                <button (click)="deleteReadLater(row)" class="btn btn-danger mx-3">Delete</button>
+              </td>            
+          </tr>
+
+
+      </tbody>
+  </table>
+
+

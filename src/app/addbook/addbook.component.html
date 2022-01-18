@@ -1,0 +1,108 @@
+
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1>Admin Panel</h1>
+      <div class="d-flex">
+        <button routerLink="/dashboard" class="btn btn-danger mx-2">User Panel</button>
+        <button type="button" (click)="clickAddBook()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add Book</button>
+        <button routerLink="/login" class="btn btn-danger mx-2">LogOut</button>
+  
+      </div>
+    </div>
+  
+  
+  </nav>
+
+  <table class="table mt-3">
+      <thead>
+          <tr>
+              <th scope="col">Book ID</th>
+              <th scope="col">Book Name</th>
+              <th scope="col">Author Name</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Year</th>
+              <th scope="col">Action</th>
+          
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let row of bookData">
+            
+              <td>{{row.id}}</td>
+              <td>{{row.bookName}}</td>
+              <td>{{row.author}}</td>
+              <td>{{row.genre}}</td>
+              <td>{{row.year}}</td>
+             
+              <td>
+                  <button (click) ="onEdit(row)" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" >Edit</button>
+                  <button (click)="deleteBook(row)" class="btn btn-danger mx-3">Delete</button>
+              </td>
+          </tr>
+
+
+      </tbody>
+  </table>
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue"  >
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Book Name</label>
+                  <input type="text"  formControlName = "bookName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <span class="text-danger"
+                                *ngIf="(registerFormControl.bookName.touched || submitted) && registerFormControl.bookName.errors?.required">
+                               Book Name is required
+                            </span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Author</label>
+                    <input type="text" formControlName="author" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span class="text-danger"
+                                *ngIf="(registerFormControl.author.touched || submitted) && registerFormControl.author.errors?.required">
+                               Author Name is required
+                            </span>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Genre</label>
+                    <input type="text" formControlName="genre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span class="text-danger"
+                                *ngIf="(registerFormControl.genre.touched || submitted) && registerFormControl.genre.errors?.required">
+                                Genre is required
+                            </span>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Year</label>
+                    <input type="number" formControlName="year" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span class="text-danger"
+                                *ngIf="(registerFormControl.year.touched || submitted) && registerFormControl.year.errors?.required">
+                                Year is required
+                            </span>
+                  </div>
+
+
+                
+             </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="postBookDetails()" id="cancel" class="btn btn-primary">Add</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateBookDetail()" id="cancel" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
